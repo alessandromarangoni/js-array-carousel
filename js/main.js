@@ -27,7 +27,7 @@ let slideContainer = document.getElementById("slider")
 let btn = document.getElementById("bottone")
 let btnback = document.getElementById("back")
 let currentslide = 0;
-const immagini = [img2, img3, img4, img5]
+const immagini = [img2, img3, img4, img5, img1]
 let problema = document.getElementById("imgStart")
 
 btn.addEventListener("click", function(){
