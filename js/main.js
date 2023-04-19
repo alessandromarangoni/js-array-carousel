@@ -21,6 +21,7 @@ var img5 = document.createElement("img");
 img5.src = "./img/05.webp"
 img5.classList.add("slide", "hidden")
 
+// dichiaro le immagini
 
 
 let slideContainer = document.getElementById("slider")
@@ -29,10 +30,10 @@ let btnback = document.getElementById("back")
 let currentslide = 0;
 const immagini = [img2, img3, img4, img5, img1]
 let problema = document.getElementById("imgStart")
-
+// aggiungo evento al click della freccia in alto 
 btn.addEventListener("click", function(){
+    // immagine nel dom sparisce
     problema.classList.add("hidden")
-// document.getElementById("slider").appendChild(img2);
 
     for (let c = 0; c < immagini.length; c++) {
         const slide = immagini[c];
@@ -41,18 +42,20 @@ btn.addEventListener("click", function(){
             slide.classList.remove("hidden")
             console.log("si")
         }
+
         else {
             console.log("no")
             slide.classList.add("hidden")
         }
     }
     currentslide++
-
+    // controllo che la posizione corrente non raggiunga mai un "index" > della linghezza dell array e nel caso lo fa lo riporto alla posizione 0
     if(currentslide >= immagini.length){
         currentslide = 0
     }
 }
 )
+// faccio l inverso di quello fatto sopra 
 
 btnback.addEventListener("click", function(){
     problema.classList.add("hidden")
@@ -70,20 +73,18 @@ btnback.addEventListener("click", function(){
         }
     }
     currentslide--
-
-    if(currentslide > immagini.length){
-        currentslide = 0
-    }
-
+    // aggiungo variabile torna indietro
     var tornaNdre;
-
+    // se l "index" è inferiore a 0 lo riporto alla immagine numero 5 che in realtà è la 1
     if (currentslide < 0){
-        currentslide = 3
+        currentslide = 4
         tornaNdre = true
     }
     
     if (tornaNdre != true) {
         currentslide = currentslide--
     }
+
+    //c'è sicuramente un errore nel tornare indietro ora ma non riesco a capire di preciso come risolverlo ci riprovo più tardi
 }
 )
