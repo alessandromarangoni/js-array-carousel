@@ -55,7 +55,8 @@ btn.addEventListener("click", function(){
 )
 
 btnback.addEventListener("click", function(){
-    problema.classList.add("imgStart")
+    problema.classList.add("hidden")
+
     for (let c = 0; c < immagini.length; c++) {
         const slide = immagini[c];
         if(c == currentslide){
@@ -77,7 +78,7 @@ btnback.addEventListener("click", function(){
     var tornaNdre;
 
     if (currentslide < 0){
-        currentslide = 4
+        currentslide = 3
         tornaNdre = true
     }
     
