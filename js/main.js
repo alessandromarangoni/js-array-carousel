@@ -27,8 +27,8 @@ let slideContainer = document.getElementById("slider")
 let btn = document.getElementById("bottone")
 let btnback = document.getElementById("back")
 let currentslide = 0;
-const immagini = [img1, img2, img3, img4, img5]
-let problema = document.getElementById("problema")
+const immagini = [img2, img3, img4, img5]
+let problema = document.getElementById("imgStart")
 
 btn.addEventListener("click", function(){
     problema.classList.add("hidden")
@@ -55,7 +55,7 @@ btn.addEventListener("click", function(){
 )
 
 btnback.addEventListener("click", function(){
-    problema.classList.add("hidden")
+    problema.classList.add("imgStart")
     for (let c = 0; c < immagini.length; c++) {
         const slide = immagini[c];
         if(c == currentslide){
